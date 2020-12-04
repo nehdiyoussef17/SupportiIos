@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		415790B1257988E200424B7A /* ActualiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415790B0257988E200424B7A /* ActualiteController.swift */; };
 		41CE806A257683EC00634E9F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE8069257683EC00634E9F /* RegisterController.swift */; };
 		546C1427256D1318009DCB95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C1426256D1318009DCB95 /* AppDelegate.swift */; };
 		546C1429256D1318009DCB95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C1428256D1318009DCB95 /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 		01773491C899658DC3DFA3D6 /* Pods_Supporti_SupportiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Supporti_SupportiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D74C3F3D43C73595DE0C89 /* Pods-SupportiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SupportiTests.release.xcconfig"; path = "Target Support Files/Pods-SupportiTests/Pods-SupportiTests.release.xcconfig"; sourceTree = "<group>"; };
 		3B7C84D22CECB53C187FCDC8 /* Pods-SupportiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SupportiTests.debug.xcconfig"; path = "Target Support Files/Pods-SupportiTests/Pods-SupportiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		415790B0257988E200424B7A /* ActualiteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualiteController.swift; sourceTree = "<group>"; };
 		41CE8069257683EC00634E9F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		546C1423256D1318009DCB95 /* Supporti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Supporti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		546C1426256D1318009DCB95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +107,6 @@
 				3B7C84D22CECB53C187FCDC8 /* Pods-SupportiTests.debug.xcconfig */,
 				14D74C3F3D43C73595DE0C89 /* Pods-SupportiTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,6 +144,7 @@
 				546C1437256D1319009DCB95 /* Info.plist */,
 				546C142F256D1318009DCB95 /* Supporti.xcdatamodeld */,
 				41CE8069257683EC00634E9F /* RegisterController.swift */,
+				415790B0257988E200424B7A /* ActualiteController.swift */,
 			);
 			path = Supporti;
 			sourceTree = "<group>";
@@ -187,6 +189,7 @@
 				546C1420256D1318009DCB95 /* Frameworks */,
 				546C1421256D1318009DCB95 /* Resources */,
 				5B3B1C6AC0D1D8E5C4CBA8ED /* [CP] Embed Pods Frameworks */,
+				68ACA98F8E90BCBDE63F94C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +228,7 @@
 				546C1444256D1319009DCB95 /* Frameworks */,
 				546C1445256D1319009DCB95 /* Resources */,
 				F848EEF7A84DC56508BDEEAC /* [CP] Embed Pods Frameworks */,
+				9BF5EFB207AFBEE8D3BBBE3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,6 +350,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Supporti/Pods-Supporti-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		68ACA98F8E90BCBDE63F94C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Supporti/Pods-Supporti-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Supporti/Pods-Supporti-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Supporti/Pods-Supporti-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		745DB68A97C207C787EB1711 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +387,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BF5EFB207AFBEE8D3BBBE3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Supporti-SupportiUITests/Pods-Supporti-SupportiUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Supporti-SupportiUITests/Pods-Supporti-SupportiUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Supporti-SupportiUITests/Pods-Supporti-SupportiUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E19A43CB67C6049750BA6EE5 /* [CP] Check Pods Manifest.lock */ = {
@@ -416,6 +454,7 @@
 			files = (
 				41CE806A257683EC00634E9F /* RegisterController.swift in Sources */,
 				546C142B256D1318009DCB95 /* ViewController.swift in Sources */,
+				415790B1257988E200424B7A /* ActualiteController.swift in Sources */,
 				546C1427256D1318009DCB95 /* AppDelegate.swift in Sources */,
 				546C1429256D1318009DCB95 /* SceneDelegate.swift in Sources */,
 				546C1431256D1318009DCB95 /* Supporti.xcdatamodeld in Sources */,

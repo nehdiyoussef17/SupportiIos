@@ -7,6 +7,9 @@ target 'Supporti' do
 
   # Pods for Supporti
 pod 'Alamofire', '~> 4.3'
+pod 'FBSDKLoginKit'
+pod 'GoogleSignIn'
+    
 
   target 'SupportiTests' do
     inherit! :search_paths
