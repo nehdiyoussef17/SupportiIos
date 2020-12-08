@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		415790B1257988E200424B7A /* ActualiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415790B0257988E200424B7A /* ActualiteController.swift */; };
+		415790DC2579F32E00424B7A /* ActualiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415790DB2579F32E00424B7A /* ActualiteController.swift */; };
+		415790E12579F39F00424B7A /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415790E02579F39F00424B7A /* HomeCollectionViewCell.swift */; };
 		41CE806A257683EC00634E9F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CE8069257683EC00634E9F /* RegisterController.swift */; };
 		546C1427256D1318009DCB95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C1426256D1318009DCB95 /* AppDelegate.swift */; };
 		546C1429256D1318009DCB95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C1428256D1318009DCB95 /* SceneDelegate.swift */; };
@@ -44,7 +45,8 @@
 		01773491C899658DC3DFA3D6 /* Pods_Supporti_SupportiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Supporti_SupportiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D74C3F3D43C73595DE0C89 /* Pods-SupportiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SupportiTests.release.xcconfig"; path = "Target Support Files/Pods-SupportiTests/Pods-SupportiTests.release.xcconfig"; sourceTree = "<group>"; };
 		3B7C84D22CECB53C187FCDC8 /* Pods-SupportiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SupportiTests.debug.xcconfig"; path = "Target Support Files/Pods-SupportiTests/Pods-SupportiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		415790B0257988E200424B7A /* ActualiteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualiteController.swift; sourceTree = "<group>"; };
+		415790DB2579F32E00424B7A /* ActualiteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualiteController.swift; sourceTree = "<group>"; };
+		415790E02579F39F00424B7A /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		41CE8069257683EC00634E9F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		546C1423256D1318009DCB95 /* Supporti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Supporti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		546C1426256D1318009DCB95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +146,8 @@
 				546C1437256D1319009DCB95 /* Info.plist */,
 				546C142F256D1318009DCB95 /* Supporti.xcdatamodeld */,
 				41CE8069257683EC00634E9F /* RegisterController.swift */,
-				415790B0257988E200424B7A /* ActualiteController.swift */,
+				415790DB2579F32E00424B7A /* ActualiteController.swift */,
+				415790E02579F39F00424B7A /* HomeCollectionViewCell.swift */,
 			);
 			path = Supporti;
 			sourceTree = "<group>";
@@ -452,9 +455,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415790E12579F39F00424B7A /* HomeCollectionViewCell.swift in Sources */,
 				41CE806A257683EC00634E9F /* RegisterController.swift in Sources */,
 				546C142B256D1318009DCB95 /* ViewController.swift in Sources */,
-				415790B1257988E200424B7A /* ActualiteController.swift in Sources */,
+				415790DC2579F32E00424B7A /* ActualiteController.swift in Sources */,
 				546C1427256D1318009DCB95 /* AppDelegate.swift in Sources */,
 				546C1429256D1318009DCB95 /* SceneDelegate.swift in Sources */,
 				546C1431256D1318009DCB95 /* Supporti.xcdatamodeld in Sources */,
