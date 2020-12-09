@@ -184,11 +184,17 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gqb-zm-JqX">
+                                <rect key="frame" x="146" y="339" width="123" height="28"/>
+                                <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0gy-Vw-DJk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xPY-qR-c1B" firstAttribute="leading" secondItem="0gy-Vw-DJk" secondAttribute="leading" id="BL1-Rg-BKO"/>
+                            <constraint firstItem="gqb-zm-JqX" firstAttribute="centerY" secondItem="xPY-qR-c1B" secondAttribute="centerY" id="Gy1-eX-lNx"/>
                             <constraint firstItem="xPY-qR-c1B" firstAttribute="top" secondItem="hDb-4q-NgG" secondAttribute="bottom" constant="90" id="KO9-ld-tuw"/>
                             <constraint firstItem="0gy-Vw-DJk" firstAttribute="bottom" secondItem="xPY-qR-c1B" secondAttribute="bottom" constant="466" id="Nbh-Yd-eUJ"/>
                             <constraint firstItem="hDb-4q-NgG" firstAttribute="leading" secondItem="0gy-Vw-DJk" secondAttribute="leading" constant="32" id="Oa9-No-d2c"/>
@@ -203,6 +209,7 @@
                     <navigationItem key="navigationItem" id="J0n-ct-SfE"/>
                     <connections>
                         <outlet property="collectionView" destination="xPY-qR-c1B" id="SWv-Bz-BUd"/>
+                        <outlet property="pageControl" destination="gqb-zm-JqX" id="ejZ-nQ-MHE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tu0-uD-RnD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -769,7 +776,7 @@
             <objects>
                 <viewController storyboardIdentifier="RegisterController" id="IaC-5s-BTq" customClass="RegisterController" customModule="Supporti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xS9-t9-RaQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="126332086_833040434123621_7684467818215120472_n" translatesAutoresizingMaskIntoConstraints="NO" id="BbN-Dy-O57">
@@ -914,6 +921,9 @@
         <image name="phone" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>

@@ -14,6 +14,7 @@ class ActualiteController: UIViewController, UICollectionViewDelegate, UICollect
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var pageControl: UIPageControl!
     
     
     
@@ -25,7 +26,7 @@ class ActualiteController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
        collectionView.delegate = self
         collectionView.dataSource = self
-        
+        pageControl.numberOfPages = arrActualitePhotos.count
         startTimer()
         // Do any additional setup after loading the view.
     }
@@ -44,6 +45,7 @@ class ActualiteController: UIViewController, UICollectionViewDelegate, UICollect
         }
         currentCellIndex += 1
         collectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
+        pageControl.currentPage = currentCellIndex
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
