@@ -32,7 +32,7 @@ class ActualiteController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func startTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
         
         
     }

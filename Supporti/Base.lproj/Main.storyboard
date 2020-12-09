@@ -209,7 +209,7 @@
                     <navigationItem key="navigationItem" id="J0n-ct-SfE"/>
                     <connections>
                         <outlet property="collectionView" destination="xPY-qR-c1B" id="SWv-Bz-BUd"/>
-                        <outlet property="pageControl" destination="gqb-zm-JqX" id="ejZ-nQ-MHE"/>
+                        <outlet property="pageControl" destination="gqb-zm-JqX" id="iJ4-dN-TYB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tu0-uD-RnD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
