@@ -769,7 +769,7 @@
             <objects>
                 <viewController storyboardIdentifier="RegisterController" id="IaC-5s-BTq" customClass="RegisterController" customModule="Supporti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xS9-t9-RaQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="126332086_833040434123621_7684467818215120472_n" translatesAutoresizingMaskIntoConstraints="NO" id="BbN-Dy-O57">

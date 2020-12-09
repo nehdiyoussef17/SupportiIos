@@ -17,14 +17,33 @@ class ActualiteController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     
-    var arrActualitePhotos = [UIImage(named: "Actualite1")!,UIImage(named: "Actualite2")!,UIImage(named: "Actualite3")!,UIImage(named: "Actualite1")!,UIImage(named: "Actualite4")!]
+    var arrActualitePhotos = [UIImage(named: "Actualite1")!,UIImage(named: "Actualite2")!,UIImage(named: "Actualite3")!,UIImage(named: "Actualite4")!]
+    var timer : Timer?
+    var  currentCellIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        collectionView.delegate = self
         collectionView.dataSource = self
         
-
+        startTimer()
         // Do any additional setup after loading the view.
+    }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveToNextIndex), userInfo: nil, repeats: true)
+        
+        
+    }
+    @objc func moveToNextIndex() {
+        if currentCellIndex < arrActualitePhotos.count - 1{
+         currentCellIndex += 1
+        }else{
+            currentCellIndex = 0
+            
+        }
+        currentCellIndex += 1
+        collectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
