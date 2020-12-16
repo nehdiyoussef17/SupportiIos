@@ -11,12 +11,17 @@ import UIKit
 class ActualiteController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
+
+    @IBOutlet weak var userButton: UIButton!
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+  
     @IBOutlet weak var pageControl: UIPageControl!
+     
+        
     
-    
+
     
     var arrActualitePhotos = [UIImage(named: "Actualite1")!,UIImage(named: "Actualite2")!,UIImage(named: "Actualite3")!,UIImage(named: "Actualite4")!]
     var timer : Timer?
@@ -24,6 +29,13 @@ class ActualiteController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.integer(forKey: "connected")==1 {
+            userButton.isHidden=true
+        }
+       
+        
+        
        collectionView.delegate = self
         collectionView.dataSource = self
         pageControl.numberOfPages = arrActualitePhotos.count

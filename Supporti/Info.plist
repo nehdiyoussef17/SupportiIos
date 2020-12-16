@@ -37,12 +37,17 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.312004191721-ir7k8u19obmkn28dqu6e0k06qa481h2t'</string>
+				<string>com.googleusercontent.apps.312004191721-ir7k8u19obmkn28dqu6e0k06qa481h2t&apos;</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>FacebookAppID</key>
 	<string>847766319331574</string>
 	<key>FacebookDisplayName</key>

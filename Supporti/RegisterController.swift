@@ -101,7 +101,7 @@ class RegisterController: UIViewController {
                    print(response)
                    
                 //getting the json value from the server
-                            if let result = response.result.value {
+                           if let result = response.result.value {
                                 
                                 //converting it as NSDictionary
                                // let jsonData = result as! NSDictionary

@@ -18,8 +18,8 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInDelegate {
     
     
     
-    
-    
+    let defaults = UserDefaults.standard
+
     
     let URL_USER_REGISTER = "http://192.168.133.1:5000/login"
     
@@ -50,6 +50,7 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInDelegate {
                ]
                
                //Sending http post request
+       
                Alamofire.request(URL_USER_REGISTER, method: .post, parameters: parameters).responseJSON
                {
                    response in
@@ -63,7 +64,7 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInDelegate {
                                 //converting it as NSDictionary
                                
                                 
-                               
+                               print(result)
                                 
                                
                         
@@ -71,6 +72,7 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInDelegate {
                         
                 if String(result  as! String) == ("User Not Found!!!") {
                     self.promptAction(promptTitle: "Erreur!", promptText: "utilisateur introuvable")
+                    
         }
                 else if String(result  as! String) == ("Wrong Password") {
                     self.promptAction(promptTitle: "erreur!", promptText: "mot de passe incorrect")
@@ -78,9 +80,13 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInDelegate {
         
                 else {
                     
-                    let story = UIStoryboard(name: "Main", bundle:nil )
-                    let controller = story.instantiateViewController(identifier: "ActualiteController") as! ActualiteController
-                    self.present(controller, animated: true, completion: nil)
+                    UserDefaults.standard.set(self.textFieldEmail.text, forKey: "UserEmailConnected")
+                    UserDefaults.standard.set(1, forKey: "connected")
+                    
+
+
+                    let next = self.storyboard?.instantiateViewController(withIdentifier: "ActualiteController") as! UIViewController
+                        self.present(next, animated: true, completion: nil)
                     }
                             }
                }
