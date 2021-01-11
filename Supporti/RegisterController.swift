@@ -23,7 +23,7 @@ class RegisterController: UIViewController {
     
     @IBOutlet weak var textFieldPassword: UITextField!
     
-    @IBOutlet weak var LabelMessage: UILabel!
+    
     
     func promptAction(promptTitle: String, promptText: String){
         

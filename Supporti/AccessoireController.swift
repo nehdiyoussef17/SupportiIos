@@ -11,7 +11,8 @@ import UIKit
 
 class AccessoireController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
- 
+    @IBOutlet weak var userButton: UIButton!
+    
   
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,6 +27,9 @@ class AccessoireController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
     super.viewDidLoad()
+        if UserDefaults.standard.integer(forKey: "connected")==1 {
+            userButton.isHidden=true
+        }
         downloaJson()
 }
     

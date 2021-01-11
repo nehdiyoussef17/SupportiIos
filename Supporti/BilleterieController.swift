@@ -13,7 +13,8 @@ import UIKit
 class BilleterieController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
-  
+    @IBOutlet weak var userButton: UIButton!
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -71,7 +72,11 @@ class BilleterieController: UIViewController, UITableViewDataSource, UITableView
    
     
     override func viewDidLoad() {
+        if UserDefaults.standard.integer(forKey: "connected")==1 {
+            userButton.isHidden=true
+        }
     super.viewDidLoad()
+        
         downloaJson()
 }
     
