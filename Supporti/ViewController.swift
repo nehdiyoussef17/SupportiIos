@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import FBSDKLoginKit
 import GoogleSignIn
+import SwiftyJSON
 
 
 
@@ -57,6 +58,7 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInDelegate {
                    //printing response
                    print(response)
                 var responseData : NSData!
+                let resJson = JSON(response.result.value!)
             
                 //getting the json value from the server
                             if let result = response.result.value {
@@ -66,21 +68,48 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInDelegate {
                                 
                                print(result)
                                 
-                               
+
                         
                 
                         
-                if String(result  as! String) == ("User Not Found!!!") {
+                if (resJson) == ("User Not Found!!!") {
                     self.promptAction(promptTitle: "Erreur!", promptText: "utilisateur introuvable")
                     
         }
-                else if String(result  as! String) == ("Wrong Password") {
+                else if (resJson) == ("Wrong Password") {
                     self.promptAction(promptTitle: "erreur!", promptText: "mot de passe incorrect")
                }
         
                 else {
                     
-                    UserDefaults.standard.set(self.textFieldEmail.text, forKey: "UserEmailConnected")
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                      
+                                                print(resJson)
+                                                print("hedha el télifoun")
+                                                print(resJson["tel_user"])
+                                                let pdv : PlusController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "plus")
+                                                    as! PlusController
+                                                
+                    pdv.id_user = resJson["id_user"].stringValue
+                    pdv.nom_user = resJson["nom_user"].stringValue
+                    pdv.prenom_user = resJson["prenom_user"].stringValue
+                    pdv.email_user = resJson["email_user"].stringValue
+                    pdv.tel_user = resJson["tel_user"].stringValue
+                    
+                    UserDefaults.standard.set(pdv.id_user, forKey: "UserIdConnected")
+                    UserDefaults.standard.set(pdv.nom_user, forKey: "UserNameConnected")
+                    UserDefaults.standard.set(pdv.prenom_user, forKey: "UserPrenameConnected")
+                    UserDefaults.standard.set(pdv.email_user, forKey: "UserEmailConnected")
+                    UserDefaults.standard.set(pdv.tel_user, forKey: "UserPhoneConnected")
+                    
+                    
                     UserDefaults.standard.set(1, forKey: "connected")
                     
 

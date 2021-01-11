@@ -9,6 +9,7 @@ target 'Supporti' do
 pod 'Alamofire', '~> 4.3'
 pod 'FBSDKLoginKit'
 pod 'GoogleSignIn'
+pod 'SwiftyJSON'
     
 
   target 'SupportiTests' do
